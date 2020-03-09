@@ -10,29 +10,442 @@
 
 }
 
-    <div data-role="page">
+    <body class="clr-accent-lime">
 
-        <nd2-include data-src="/examples/fragments/panel.left.html"></nd2-include>
+        <div data-role="page" class="nd2-no-menu-swipe">
 
-        <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
-            <nd2-include data-src="/examples/fragments/bottom.sheet.html"></nd2-include>
-        </div>
-
-        <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
-            <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
-            <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
-            <h1 class="wow fadeIn" data-wow-delay='0.4s'>Page Title</h1>
-        </div>
-
-        <div role="main" class="ui-content" data-inset="false">
-            <p>(home)</p>
-            <p>This is the greeting : @greeting</p>
-            <p>This is a reference blog</p>
-            <img src="~/img/examples/card_bg_1.jpg" lt="ASP.NET" class="img-responsive" />
-        </div>
-
-    </div>
+            <nd2-include data-src="/examples/fragments/panel.left.html"></nd2-include>
 
 
+            <div data-role="header" data-position="fixed" class="wow fadeIn">
+                <a href="#leftpanel" class="ui-btn ui-btn-left"><i class="zmdi zmdi-menu"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>@ViewData["Title"]</h1>
+
+                <ul data-role="nd2tabs" data-swipe="true">
+                    <li data-tab="status" data-tab-active="true">Status</li>
+                    <li data-tab="control">Control</li>
+                    <li data-tab="feed">Feed</li>
+                    <li data-tab="colors">Colors</li>
+                </ul>
+
+            </div>
+
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+
+                <div data-role="nd2tab"
+                     data-tab="status">
 
 
+                    <ul data-role="listview" data-icon="false">
+                        <li data-role="list-divider"></li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/technics/1" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Do thing one</h2>
+                                <p>This will do the first thing</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/technics/2" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Do thing two</h2>
+                                <p>This will do the second thing</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/technics/3" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Do thing three</h2>
+                                <p>This will do the third thing</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/technics/4" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Do thing four</h2>
+                                <p>This will do the fourth thing</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/technics/5" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Do thing five</h2>
+                                <p>This will do the fifth thing</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/technics/6" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Do thing six</h2>
+                                <p>This will do the final thing</p>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div data-role="nd2tab"
+                     data-tab="control">
+
+                    <form>
+
+                        <div class="row">
+
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="box"></div>
+                                    <label for="flip2b">Flip switch:</label>
+                                    <select name="flip2" id="flip2b" data-role="flipswitch">
+                                        <option value="off">Off</option>
+                                        <option value="on">On</option>
+                                    </select>
+
+                                    <label for="slider2b">Slider:</label>
+                                    <input type="range" name="slider2" id="slider2b" value="0" min="0" max="100" data-highlight="true">
+
+                                    <div data-role='rangeslider'>
+                                        <label for='rangeslider1a'>RangeSlider:</label>
+                                        <input type='range' name='range1a' id='range1a' min='0' max='100' value='40'>
+                                        <label for='rangeslider1b'>RangeSlider:</label>
+                                        <input type='range' name='range1b' id='range1b' min='0' max='100' value='80'>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="box"></div>
+                                    <label for="flip2b">Flip switch:</label>
+                                    <select name="flip2" id="flip2b" data-role="flipswitch">
+                                        <option value="off">Off</option>
+                                        <option value="on">On</option>
+                                    </select>
+
+                                    <label for="slider2b">Slider:</label>
+                                    <input type="range" name="slider2" id="slider2b" value="0" min="0" max="100" data-highlight="true">
+
+                                    <div data-role='rangeslider'>
+                                        <label for='rangeslider1a'>RangeSlider:</label>
+                                        <input type='range' name='range1a' id='range1a' min='0' max='100' value='40'>
+                                        <label for='rangeslider1b'>RangeSlider:</label>
+                                        <input type='range' name='range1b' id='range1b' min='0' max='100' value='80'>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="box"></div>
+                                    <label for="flip2b">Flip switch:</label>
+                                    <select name="flip2" id="flip2b" data-role="flipswitch">
+                                        <option value="off">Off</option>
+                                        <option value="on">On</option>
+                                    </select>
+
+                                    <label for="slider2b">Slider:</label>
+                                    <input type="range" name="slider2" id="slider2b" value="0" min="0" max="100" data-highlight="true">
+
+                                    <div data-role='rangeslider'>
+                                        <label for='rangeslider1a'>RangeSlider:</label>
+                                        <input type='range' name='range1a' id='range1a' min='0' max='100' value='40'>
+                                        <label for='rangeslider1b'>RangeSlider:</label>
+                                        <input type='range' name='range1b' id='range1b' min='0' max='100' value='80'>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+
+                                <div data-role="nd2tab"
+                                     data-tab="feed">
+
+
+
+                                    <!-- Simple Card with Title !-->
+
+                                    <div class="nd2-card">
+
+                                        <div class="card-title has-avatar">
+                                            <img class="card-avatar" src="//lorempixel.com/200/200/people/9/">
+                                            <h3 class="card-primary-title">Power of Lavender</h3>
+                                            <h5 class="card-subtitle">Taken in Provence, France</h5>
+                                        </div>
+
+                                        <div class="card-media">
+                                            <img src="/img/examples/card_bg_2.jpg">
+                                        </div>
+
+                                        <div class="card-supporting-text has-action">
+                                            <strong>Lavandula</strong> (common name lavender) is a genus of 39 known species of flowering plants in the mint family, Lamiaceae. It is native to the Old World and is found from Cape Verde and the Canary Islands, southern Europe across to northern and eastern Africa, the Mediterranean, southwest Asia to southeast India.
+                                        </div>
+
+                                        <div class="card-action">
+                                            <div class="row between-xs">
+                                                <div class="col-xs-4">
+                                                    <div class="box">
+                                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mic'></i></a>
+                                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-videocam'></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-8 align-right">
+                                                    <div class="box">
+                                                        <a href="#" class="ui-btn ui-btn-inline">Action</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Simple Card No Media !-->
+
+                                    <div class="nd2-card">
+
+                                        <div class="card-title has-supporting-text">
+                                            <h3 class="card-primary-title">Biomaterial</h3>
+                                            <h5 class="card-subtitle">From Wikipedia, the free encyclopedia</h5>
+                                        </div>
+
+                                        <div class="card-supporting-text has-action has-title">
+                                            A biomaterial is any matter, surface, or construct that interacts with biological systems. As a science, biomaterials is about fifty years old. The study of biomaterials is called biomaterials science. It has experienced steady and strong growth over its history, with many companies investing large amounts of money into the development of new products.
+                                        </div>
+
+                                        <div class="card-action">
+                                            <div class="row between-xs">
+                                                <div class="col-xs-12">
+                                                    <div class="box">
+                                                        <a href="#" class="ui-btn ui-btn-inline">Applause</a>
+                                                        <a href="#" class="ui-btn ui-btn-inline">Boooh</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Media Card with Actions !-->
+
+                                    <div class="nd2-card">
+
+                                        <div class="card-media">
+                                            <img src="/img/examples/card_bg_3.jpg">
+                                        </div>
+
+                                        <div class="card-action">
+                                            <div class="row between-xs">
+                                                <div class="col-xs-12 align-right">
+                                                    <div class="box">
+                                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+                                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+                                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Media Overlay with Background !-->
+
+                                    <div class="nd2-card">
+
+
+                                        <div class="card-media">
+                                            <img src="/img/examples/card_bg_2.jpg">
+
+                                            <div class='card-media-overlay with-background'>
+
+                                                <div class="card-title has-supporting-text">
+                                                    <h3 class="card-primary-title">Power of Lavender</h3>
+                                                    <h5 class="card-subtitle">Taken in Provence, France</h5>
+                                                </div>
+
+                                                <div class="card-action">
+                                                    <div class="row between-xs">
+                                                        <div class="col-xs-12">
+                                                            <div class="box">
+                                                                <a href="#" class="ui-btn ui-btn-inline">Action 1</a>
+                                                                <a href="#" class="ui-btn ui-btn-inline">Action 2</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div data-role="nd2tab"
+                                     data-tab="colors">
+
+                                    <ul data-role="listview" data-icon="false">
+                                        <li data-role="list-divider">Available Color Sheets</li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-red ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>red</h2>
+                                                <p>nativedroid2.color.red.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-pink ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>pink</h2>
+                                                <p>nativedroid2.color.pink.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-purple ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>purple</h2>
+                                                <p>nativedroid2.color.purple.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-deep-purple ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>deep-purple</h2>
+                                                <p>nativedroid2.color.deep-purple.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-indigo ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>indigo</h2>
+                                                <p>nativedroid2.color.indigo.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-blue ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>blue</h2>
+                                                <p>nativedroid2.color.blue.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-light-blue ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>light-blue</h2>
+                                                <p>nativedroid2.color.light-blue.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-cyan ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>cyan</h2>
+                                                <p>nativedroid2.color.cyan.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-teal ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>teal</h2>
+                                                <p>nativedroid2.color.teal.css</p>
+                                            </a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-green ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>green</h2>
+                                                <p>nativedroid2.color.green.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-light-green ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>light-green</h2>
+                                                <p>nativedroid2.color.light-green.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-lime ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>lime</h2>
+                                                <p>nativedroid2.color.lime.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-yellow ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>yellow</h2>
+                                                <p>nativedroid2.color.yellow.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-amber ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>amber</h2>
+                                                <p>nativedroid2.color.amber.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-orange ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>orange</h2>
+                                                <p>nativedroid2.color.orange.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-deep-orange ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>deep-orange</h2>
+                                                <p>nativedroid2.color.deep-orange.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-brown ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>brown</h2>
+                                                <p>nativedroid2.color.brown.css</p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <img class="clr-bg-blue-grey ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                                                <h2>blue-grey</h2>
+                                                <p>nativedroid2.color.blue-grey.css</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                        </div>
+
+                </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+        <script src="/vendor/waves/waves.min.js"></script>
+        <script src="/vendor/wow/wow.min.js"></script>
+        <script src="/js/nativedroid2.js"></script>
+        <script src="/nd2settings.js"></script>
+
+    </body>
